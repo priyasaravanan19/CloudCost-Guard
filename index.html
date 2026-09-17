@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudCost Guard | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">☁</div>
+
+            <div>
+                <h2>CloudCost <span>Guard</span></h2>
+                <small>Monitor · Analyze · Optimize</small>
+            </div>
+        </div>
+
+        <nav class="nav">
+
+            <a class="nav-item active" href="index.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a class="nav-item" href="pages/analytics/index.html">
+                <span>▥</span>
+                Cost Analytics
+            </a>
+
+            <a class="nav-item" href="pages/resources/index.html">
+                <span>ϟ</span>
+                Resource Usage
+            </a>
+
+            <a class="nav-item" href="pages/alerts/index.html">
+                <span>♧</span>
+                Alerts
+                <b class="badge">3</b>
+            </a>
+
+            <a class="nav-item" href="pages/resources/index.html#unused">
+                <span>▤</span>
+                Unused Resources
+            </a>
+
+            <a class="nav-item" href="pages/optimization/index.html">
+                <span>♧</span>
+                Optimization
+            </a>
+
+            <a class="nav-item" href="pages/reports/index.html">
+                <span>▧</span>
+                Reports
+            </a>
+
+            <a class="nav-item" href="pages/settings/index.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="cloud-art">
+                ☁️
+            </div>
+
+            <p>
+                Smarter Cloud Spending<br>
+                for a Brighter Tomorrow
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">
+                ☰
+            </button>
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    id="globalSearch"
+                    type="text"
+                    placeholder="Search resources, services, or regions..."
+                >
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="providers">
+
+                    <button class="provider active">
+                        aws
+                    </button>
+
+                    <button class="provider">
+                        ▲ Azure
+                    </button>
+
+                    <button class="provider">
+                        🌐 GCP
+                    </button>
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        P
+                    </div>
+
+                    <span>
+                        Priya S.
+                    </span>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>
+                        Welcome back, Priya!
+                    </h1>
+
+                    <p>
+                        Here's your cloud cost overview for this month.
+                    </p>
+
+                </div>
+
+
+                <button class="date-picker">
+                    ▣ Apr 1, 2025 – Apr 30, 2025
+                    <span>⌄</span>
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <!-- LEFT -->
+                <section class="main-column">
+
+                    <!-- KPI -->
+                    <div class="kpi-grid">
+
+                        <article class="kpi-card">
+
+                            <div class="kpi-icon green">
+                                ＄
+                            </div>
+
+                            <span>
+                                Total Cost
+                            </span>
+
+                            <strong>
+                                $2,842.50
+                            </strong>
+
+                            <small class="down">
+                                ↓ 12%
+                                <em>vs. last month</em>
+                            </small>
+
+                        </article>
+
+
+                        <article class="kpi-card">
+
+                            <div class="kpi-icon purple">
+                                ▤
+                            </div>
+
+                            <span>
+                                Compute Cost
+                            </span>
+
+                            <strong>
+                                $1,420.30
+                            </strong>
+
+                            <small class="down">
+                                ↓ 15%
+                                <em>vs. last month</em>
+                            </small>
+
+                        </article>
+
+
+                        <article class="kpi-card">
+
+                            <div class="kpi-icon blue">
+                                ▣
+                            </div>
+
+                            <span>
+                                Storage Cost
+                            </span>
+
+                            <strong>
+                                $532.10
+                            </strong>
+
+                            <small class="down">
+                                ↓ 8%
+                                <em>vs. last month</em>
+                            </small>
+
+                        </article>
+
+
+                        <article class="kpi-card">
+
+                            <div class="kpi-icon cyan">
+                                ◎
+                            </div>
+
+                            <span>
+                                Network Cost
+                            </span>
+
+                            <strong>
+                                $890.10
+                            </strong>
+
+                            <small class="down">
+                                ↓ 10%
+                                <em>vs. last month</em>
+                            </small>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- CHARTS -->
+                    <div class="chart-grid">
+
+                        <!-- COST BREAKDOWN -->
+                        <article class="panel">
+
+                            <div class="panel-title">
+
+                                <h3>
+                                    Cost Breakdown
+                                </h3>
+
+                                <span>
+                                    ◌
+                                </span>
+
+                            </div>
+
+
+                            <div class="donut-wrap">
+
+                                <canvas id="costChart"></canvas>
+
+                                <div class="donut-center">
+
+                                    <strong>
+                                        $2,842.50
+                                    </strong>
+
+                                    <span>
+                                        Total Cost
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="legend">
+
+                                <div>
+                                    <i class="dot compute"></i>
+                                    Compute
+                                    <b>50.0%</b>
+                                    <strong>$1,420.30</strong>
+                                </div>
+
+                                <div>
+                                    <i class="dot storage"></i>
+                                    Storage
+                                    <b>18.7%</b>
+                                    <strong>$532.10</strong>
+                                </div>
+
+                                <div>
+                                    <i class="dot network"></i>
+                                    Network
+                                    <b>31.3%</b>
+                                    <strong>$890.10</strong>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SPENDING -->
+                        <article class="panel">
+
+                            <div class="panel-title">
+
+                                <h3>
+                                    Spending Trend
+                                </h3>
+
+                                <span>
+                                    Last 30 days
+                                </span>
+
+                            </div>
+
+                            <div class="trend-wrap">
+
+                                <canvas id="trendChart"></canvas>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- LOWER -->
+                    <div class="lower-grid">
+
+                        <!-- SERVICES -->
+                        <article class="panel">
+
+                            <div class="panel-title">
+
+                                <h3>
+                                    Top Services by Cost
+                                </h3>
+
+                                <a href="pages/analytics/index.html">
+                                    View all →
+                                </a>
+
+                            </div>
+
+
+                            <div class="service-list">
+
+                                <div class="service">
+
+                                    <span class="service-icon orange">
+                                        ▣
+                                    </span>
+
+                                    <span>
+                                        EC2
+                                    </span>
+
+                                    <div class="bar">
+                                        <i style="width:90%"></i>
+                                    </div>
+
+                                    <strong>
+                                        $1,420.30
+                                    </strong>
+
+                                    <b>
+                                        50%
+                                    </b>
+
+                                </div>
+
+
+                                <div class="service">
+
+                                    <span class="service-icon green2">
+                                        ▤
+                                    </span>
+
+                                    <span>
+                                        S3
+                                    </span>
+
+                                    <div class="bar">
+                                        <i style="width:42%"></i>
+                                    </div>
+
+                                    <strong>
+                                        $532.10
+                                    </strong>
+
+                                    <b>
+                                        19%
+                                    </b>
+
+                                </div>
+
+
+                                <div class="service">
+
+                                    <span class="service-icon cyan2">
+                                        ◈
+                                    </span>
+
+                                    <span>
+                                        RDS
+                                    </span>
+
+                                    <div class="bar">
+                                        <i style="width:28%"></i>
+                                    </div>
+
+                                    <strong>
+                                        $312.40
+                                    </strong>
+
+                                    <b>
+                                        11%
+                                    </b>
+
+                                </div>
+
+
+                                <div class="service">
+
+                                    <span class="service-icon yellow">
+                                        ◉
+                                    </span>
+
+                                    <span>
+                                        CloudFront
+                                    </span>
+
+                                    <div class="bar">
+                                        <i style="width:20%"></i>
+                                    </div>
+
+                                    <strong>
+                                        $201.80
+                                    </strong>
+
+                                    <b>
+                                        7%
+                                    </b>
+
+                                </div>
+
+
+                                <div class="service">
+
+                                    <span class="service-icon gray">
+                                        ◆
+                                    </span>
+
+                                    <span>
+                                        Others
+                                    </span>
+
+                                    <div class="bar">
+                                        <i style="width:34%"></i>
+                                    </div>
+
+                                    <strong>
+                                        $375.90
+                                    </strong>
+
+                                    <b>
+                                        13%
+                                    </b>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- UNUSED -->
+                        <article class="panel" id="unused">
+
+                            <div class="panel-title">
+
+                                <h3>
+                                    Unused / Underutilized Resources
+                                </h3>
+
+                                <a href="pages/resources/index.html">
+                                    View all →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-list">
+
+                                <div>
+                                    <span class="resource-icon">
+                                        ▣
+                                    </span>
+
+                                    <span>
+                                        EC2 Instances
+                                    </span>
+
+                                    <b>
+                                        6 underutilized
+                                    </b>
+
+                                    <span>→</span>
+                                </div>
+
+
+                                <div>
+                                    <span class="resource-icon pink">
+                                        ▤
+                                    </span>
+
+                                    <span>
+                                        EBS Volumes
+                                    </span>
+
+                                    <b class="red">
+                                        3 unused
+                                    </b>
+
+                                    <span>→</span>
+                                </div>
+
+
+                                <div>
+                                    <span class="resource-icon red">
+                                        ▣
+                                    </span>
+
+                                    <span>
+                                        S3 Buckets
+                                    </span>
+
+                                    <b>
+                                        2 unused
+                                    </b>
+
+                                    <span>→</span>
+                                </div>
+
+
+                                <div>
+                                    <span class="resource-icon">
+                                        ♧
+                                    </span>
+
+                                    <span>
+                                        Load Balancers
+                                    </span>
+
+                                    <b>
+                                        1 underutilized
+                                    </b>
+
+                                    <span>→</span>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RIGHT COLUMN -->
+                <aside class="right-column">
+
+                    <!-- ALERTS -->
+                    <article class="panel alerts-panel">
+
+                        <div class="panel-title">
+
+                            <h3>
+                                🔔 Alerts
+                                <b class="badge">3</b>
+                            </h3>
+
+                            <a href="pages/alerts/index.html">
+                                View all →
+                            </a>
+
+                        </div>
+
+
+                        <div class="alert-item">
+
+                            <span class="alert-icon warning">
+                                !
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    High spending detected
+                                </strong>
+
+                                <p>
+                                    Compute cost is 45% higher than usual
+                                    in us-east-1 region.
+                                </p>
+
+                                <small>
+                                    2 hours ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-item">
+
+                            <span class="alert-icon danger">
+                                ▥
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Idle resources found
+                                </strong>
+
+                                <p>
+                                    6 EC2 instances are underutilized
+                                    (&lt; 10% CPU usage).
+                                </p>
+
+                                <small>
+                                    5 hours ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-item">
+
+                            <span class="alert-icon info">
+                                i
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Budget threshold
+                                </strong>
+
+                                <p>
+                                    You've used 78% of your monthly budget.
+                                </p>
+
+                                <small>
+                                    1 day ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- OPTIMIZATION -->
+                    <article class="panel optimization-panel">
+
+                        <div class="panel-title">
+
+                            <h3>
+                                ♧ Optimization Suggestions
+                            </h3>
+
+                            <a href="pages/optimization/index.html">
+                                View all →
+                            </a>
+
+                        </div>
+
+
+                        <div class="suggestion">
+
+                            <span>♻</span>
+
+                            <div>
+
+                                <strong>
+                                    Stop 6 idle EC2 instances
+                                </strong>
+
+                                <p>
+                                    Estimated savings: $18.5/month
+                                </p>
+
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="suggestion">
+
+                            <span>♻</span>
+
+                            <div>
+
+                                <strong>
+                                    Resize 3 oversized instances
+                                </strong>
+
+                                <p>
+                                    Estimated savings: $12.3/month
+                                </p>
+
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="suggestion">
+
+                            <span>♻</span>
+
+                            <div>
+
+                                <strong>
+                                    Remove 2 unused S3 buckets
+                                </strong>
+
+                                <p>
+                                    Estimated savings: $4.7/month
+                                </p>
+
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="suggestion">
+
+                            <span>♻</span>
+
+                            <div>
+
+                                <strong>
+                                    Schedule non-production resources
+                                </strong>
+
+                                <p>
+                                    Estimated savings: $9.2/month
+                                </p>
+
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+                    </article>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cost Analytics | CloudCost Guard</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet"
+          href="../../assets/css/style.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">☁</div>
+
+        <div>
+            <h2>CloudCost <span>Guard</span></h2>
+            <small>Monitor · Analyze · Optimize</small>
+        </div>
+
+    </div>
+
+    <nav class="nav">
+
+        <a class="nav-item"
+           href="../../index.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a class="nav-item active" href="#">
+            <span>▥</span>
+            Cost Analytics
+        </a>
+
+        <a class="nav-item"
+           href="../resources/index.html">
+            <span>ϟ</span>
+            Resource Usage
+        </a>
+
+        <a class="nav-item"
+           href="../alerts/index.html">
+            <span>♧</span>
+            Alerts
+        </a>
+
+        <a class="nav-item"
+           href="../resources/index.html#unused">
+            <span>▤</span>
+            Unused Resources
+        </a>
+
+        <a class="nav-item"
+           href="../optimization/index.html">
+            <span>♧</span>
+            Optimization
+        </a>
+
+        <a class="nav-item"
+           href="../reports/index.html">
+            <span>▧</span>
+            Reports
+        </a>
+
+        <a class="nav-item"
+           href="../settings/index.html">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+    <div class="search-box">
+
+        <span>⌕</span>
+
+        <input
+            placeholder="Search analytics..."
+        >
+
+    </div>
+
+    <div class="top-actions">
+
+        <div class="profile">
+
+            <div class="avatar">
+                P
+            </div>
+
+            <span>
+                Priya S.
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="content">
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Cost Analytics
+            </h1>
+
+            <p>
+                Explore cloud spending across
+                services and time.
+            </p>
+
+        </div>
+
+        <button class="date-picker">
+            ▣ Apr 1, 2025 – Apr 30, 2025
+        </button>
+
+    </div>
+
+
+    <div class="lower-grid">
+
+        <article class="panel">
+
+            <div class="panel-title">
+
+                <h3>
+                    Monthly Spending
+                </h3>
+
+            </div>
+
+            <div style="height:330px">
+
+                <canvas id="analyticsChart"></canvas>
+
+            </div>
+
+        </article>
+
+
+        <article class="panel">
+
+            <div class="panel-title">
+
+                <h3>
+                    Service Summary
+                </h3>
+
+            </div>
+
+            <div class="resource-list">
+
+                <div>
+                    <span>EC2</span>
+                    <b>$1,420.30</b>
+                </div>
+
+                <div>
+                    <span>S3</span>
+                    <b>$532.10</b>
+                </div>
+
+                <div>
+                    <span>RDS</span>
+                    <b>$312.40</b>
+                </div>
+
+                <div>
+                    <span>CloudFront</span>
+                    <b>$201.80</b>
+                </div>
+
+                <div>
+                    <span>Others</span>
+                    <b>$375.90</b>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<script>
+
+new Chart(
+    document.getElementById("analyticsChart"),
+    {
+        type: "bar",
+
+        data: {
+
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr"
+            ],
+
+            datasets: [
+
+                {
+                    label: "Cloud Cost",
+
+                    data: [
+                        3200,
+                        2950,
+                        3220,
+                        2842.5
+                    ],
+
+                    backgroundColor: "#3387ff",
+
+                    borderRadius: 6
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

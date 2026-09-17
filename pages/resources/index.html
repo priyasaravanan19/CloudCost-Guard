@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Resource Usage | CloudCost Guard</title>
+
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet"
+      href="../../assets/css/style.css">
+
+<link rel="stylesheet"
+      href="../../assets/css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="brand-logo">☁</div>
+
+<div>
+<h2>CloudCost <span>Guard</span></h2>
+<small>Monitor · Analyze · Optimize</small>
+</div>
+
+</div>
+
+<nav class="nav">
+
+<a class="nav-item"
+href="../../index.html">
+<span>⌂</span>
+Dashboard
+</a>
+
+<a class="nav-item"
+href="../analytics/index.html">
+<span>▥</span>
+Cost Analytics
+</a>
+
+<a class="nav-item active"
+href="#">
+<span>ϟ</span>
+Resource Usage
+</a>
+
+<a class="nav-item"
+href="../alerts/index.html">
+<span>♧</span>
+Alerts
+</a>
+
+<a class="nav-item"
+href="#unused">
+<span>▤</span>
+Unused Resources
+</a>
+
+<a class="nav-item"
+href="../optimization/index.html">
+<span>♧</span>
+Optimization
+</a>
+
+<a class="nav-item"
+href="../reports/index.html">
+<span>▧</span>
+Reports
+</a>
+
+<a class="nav-item"
+href="../settings/index.html">
+<span>⚙</span>
+Settings
+</a>
+
+</nav>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+<div class="search-box">
+
+<span>⌕</span>
+
+<input
+placeholder="Search resources..."
+>
+
+</div>
+
+<div class="top-actions">
+
+<div class="profile">
+
+<div class="avatar">
+P
+</div>
+
+<span>
+Priya S.
+</span>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="content">
+
+<div class="page-heading">
+
+<div>
+
+<h1>
+Resource Usage
+</h1>
+
+<p>
+Monitor utilization and identify waste.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="kpi-grid">
+
+<article class="kpi-card">
+
+<div class="kpi-icon blue">
+▣
+</div>
+
+<span>
+Total Resources
+</span>
+
+<strong>
+124
+</strong>
+
+<small>
+Across 3 providers
+</small>
+
+</article>
+
+
+<article class="kpi-card">
+
+<div class="kpi-icon green">
+✓
+</div>
+
+<span>
+Healthy
+</span>
+
+<strong>
+101
+</strong>
+
+<small class="down">
+81% utilization
+</small>
+
+</article>
+
+
+<article class="kpi-card">
+
+<div class="kpi-icon purple">
+!
+</div>
+
+<span>
+Underutilized
+</span>
+
+<strong>
+18
+</strong>
+
+<small>
+Needs review
+</small>
+
+</article>
+
+
+<article class="kpi-card">
+
+<div class="kpi-icon cyan">
+×
+</div>
+
+<span>
+Unused
+</span>
+
+<strong>
+5
+</strong>
+
+<small>
+Potential waste
+</small>
+
+</article>
+
+</div>
+
+
+<article class="panel"
+         id="unused"
+         style="margin-top:17px">
+
+<div class="panel-title">
+
+<h3>
+Resource Inventory
+</h3>
+
+</div>
+
+
+<div class="resource-list">
+
+<div>
+<span>EC2 · production-api</span>
+<b>CPU 72%</b>
+<span>Healthy</span>
+</div>
+
+<div>
+<span>EC2 · staging-server</span>
+<b>CPU 7%</b>
+<span>Underutilized</span>
+</div>
+
+<div>
+<span>EBS · backup-volume-02</span>
+<b>0 reads</b>
+<span>Unused</span>
+</div>
+
+<div>
+<span>S3 · old-assets</span>
+<b>0 requests</b>
+<span>Unused</span>
+</div>
+
+<div>
+<span>RDS · customer-db</span>
+<b>CPU 61%</b>
+<span>Healthy</span>
+</div>
+
+</div>
+
+</article>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+</html>
